@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<robot name="maze_bot" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<material name="silver">
+  <color rgba="0.700 0.700 0.700 1.000"/>
+</material>
+
+<material name="black">
+  <color rgba="0 0 0 1.000"/>
+</material>
+
+<material name="orange">
+  <color rgba="255 132 29 1.000"/>
+</material>
+
+</robot>

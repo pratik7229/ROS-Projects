@@ -1,0 +1,165 @@
+<?xml version="1.0" ?>
+<robot name="maze_bot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find maze_bot_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find maze_bot_description)/urdf/maze_bot.trans" />
+<xacro:include filename="$(find maze_bot_description)/urdf/maze_bot.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.0055867824164207045 4.3086649718411453e-17 0.055589318728555964" rpy="0 0 0"/>
+    <mass value="3.580002214810765"/>
+    <inertia ixx="0.012385" iyy="0.026567" izz="0.035663" ixy="0.0" iyz="0.0" ixz="0.000914"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://maze_bot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://maze_bot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_wheel_1">
+  <inertial>
+    <origin xyz="-1.8346435481930712e-14 -0.012499999999999997 0.0" rpy="0 0 0"/>
+    <mass value="0.17543149376634687"/>
+    <inertia ixx="0.000119" iyy="0.000221" izz="0.000119" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.1 0.11 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://maze_bot_description/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.1 0.11 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://maze_bot_description/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_wheel_1">
+  <inertial>
+    <origin xyz="-1.8346435481930712e-14 0.012499999999999997 0.0" rpy="0 0 0"/>
+    <mass value="0.17543149376634687"/>
+    <inertia ixx="0.000119" iyy="0.000221" izz="0.000119" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.1 -0.11 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://maze_bot_description/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.1 -0.11 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://maze_bot_description/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="caster_1">
+  <inertial>
+    <origin xyz="1.3877787807814457e-17 0.0 -0.009374999999999998" rpy="0 0 0"/>
+    <mass value="0.25689064927791533"/>
+    <inertia ixx="4.2e-05" iyy="4.2e-05" izz="6.4e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.1 0.0 -0.025" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://maze_bot_description/meshes/caster_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.1 0.0 -0.025" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://maze_bot_description/meshes/caster_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_1">
+  <inertial>
+    <origin xyz="1.3877787807814457e-17 0.0 0.012499999999999983" rpy="0 0 0"/>
+    <mass value="1.541343895667491"/>
+    <inertia ixx="0.001044" iyy="0.001044" izz="0.001927" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.05 -0.0 -0.125" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://maze_bot_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.05 -0.0 -0.125" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://maze_bot_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="camera_1">
+  <inertial>
+    <origin xyz="0.004999999999999949 5.228400754468975e-13 -1.3877787807814457e-17" rpy="0 0 0"/>
+    <mass value="0.0010288715940507016"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.16 -0.0 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://maze_bot_description/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.16 -0.0 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://maze_bot_description/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Revolute 1" type="continuous">
+  <origin xyz="-0.1 -0.11 0.05" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="right_wheel_1"/>
+  <axis xyz="-0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="Revolute 2" type="continuous">
+  <origin xyz="-0.1 0.11 0.05" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="left_wheel_1"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rigid 3" type="fixed">
+  <origin xyz="0.1 0.0 0.025" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="caster_1"/>
+</joint>
+
+<joint name="Rigid 4" type="fixed">
+  <origin xyz="-0.05 0.0 0.125" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="lidar_1"/>
+</joint>
+
+<joint name="Rigid 5" type="fixed">
+  <origin xyz="0.16 0.0 0.05" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="camera_1"/>
+</joint>
+
+</robot>
