@@ -13,6 +13,8 @@
 - Step 1: Copy the mazebot directory in the ROS2 workspace and perform colcon build
 - step 2: Run the mazebot_camera_maze.launch.py file 
 
+![](maze_bot/rosbot.jpg)
+
 ## Ros Navigation Stack
 The ROS Navigation Stack project is a foundational implementation in ROS, offering a fundamental exploration into topics such as gmapping and SLAM. Designed for those embarking on their journey into ROS, this project provides essential insights into the navigation stack, serving as an excellent starting point for enthusiasts looking to delve into the intricacies of ROS navigation.
 
@@ -20,7 +22,7 @@ The ROS Navigation Stack project is a foundational implementation in ROS, offeri
 - Step 1: Copy the ros navigation stack directory in the ROS workspace and perform catkin_make
 - step 2: Run the [navigation.launch](ros navigation stack/navigation/launch/navigation.launch) file
 
-![App Screenshot](https://www.youtube.com/playlist?list=PLUnfeehiY56uImWc1iqEyvTOfCGaH3C71)
+## [Youtube](https://www.youtube.com/playlist?list=PLUnfeehiY56uImWc1iqEyvTOfCGaH3C71)
 
 
 
